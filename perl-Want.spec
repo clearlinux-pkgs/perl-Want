@@ -4,13 +4,13 @@
 #
 Name     : perl-Want
 Version  : 0.29
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz
 Summary  : ~
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-1.0+
-Requires: perl-Want-lib = %{version}-%{release}
+Requires: perl-Want-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -21,7 +21,6 @@ BuildRequires : buildreq-cpan
 %package dev
 Summary: dev components for the perl-Want package.
 Group: Development
-Requires: perl-Want-lib = %{version}-%{release}
 Provides: perl-Want-devel = %{version}-%{release}
 Requires: perl-Want = %{version}-%{release}
 
@@ -29,16 +28,18 @@ Requires: perl-Want = %{version}-%{release}
 dev components for the perl-Want package.
 
 
-%package lib
-Summary: lib components for the perl-Want package.
-Group: Libraries
+%package perl
+Summary: perl components for the perl-Want package.
+Group: Default
+Requires: perl-Want = %{version}-%{release}
 
-%description lib
-lib components for the perl-Want package.
+%description perl
+perl components for the perl-Want package.
 
 
 %prep
 %setup -q -n Want-0.29
+cd %{_builddir}/Want-0.29
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -74,12 +75,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Want.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Want.3
 
-%files lib
+%files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Want/Want.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Want.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Want/Want.so
