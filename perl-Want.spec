@@ -4,7 +4,7 @@
 #
 Name     : perl-Want
 Version  : 0.29
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz
 Summary  : ~
@@ -82,5 +82,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Want.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Want/Want.so
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Want.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/auto/Want/Want.so
