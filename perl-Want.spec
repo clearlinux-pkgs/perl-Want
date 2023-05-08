@@ -4,7 +4,7 @@
 #
 Name     : perl-Want
 Version  : 0.29
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RO/ROBIN/Want-0.29.tar.gz
 Summary  : ~
